@@ -1,5 +1,5 @@
 {
-  "name": "wp-barebone-theme-webpack5-sass",
+  "name": "BCE_THEME",
   "version": "1.0.0",
   "description": "Barebones WordPress theme with CSS/SASS and JavaScript compiled using webpack 5.",
   "main": "js/build/main.js",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/tcallsen/wp-barebone-theme-webpack5-sass.git"
   },
-  "author": "Taylor Callsen <taylor.callsen@gmail.com> (https://taylor.callsen.me/)",
+  "author": "Ty Vile - Ty.jvile@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.6",

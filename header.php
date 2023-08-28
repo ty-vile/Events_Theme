@@ -1,4 +1,14 @@
 <!-- WORDPRESS TEMPLATE FOR HEADER -->
+<?php $headerMenuLeft = array(
+  'theme_location' => 'header-menu-left',
+  'menu_class' => 'header-menu-left',
+  'menu_id' => '',
+); ?>
+<?php $headerMenuRight = array(
+  'theme_location' => 'header-menu-right',
+  'menu_class' => 'header-menu-right',
+  'menu_id' => '',
+); ?>
 
 
 <!DOCTYPE html>
@@ -27,6 +37,13 @@
     <div class="container">
 
       <div class="header__inner">
+        <div class="header__inner-left">
+          <?php wp_nav_menu($headerMenuLeft); ?>
+        </div>
+        <img src="http://bcenew.local/wp-content/uploads/2023/08/header-logo.svg" />
+        <div class="header__inner-right">
+          <?php wp_nav_menu($headerMenuRight); ?>
+        </div>
       </div>
 
     </div>

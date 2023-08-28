@@ -8,6 +8,19 @@ function theme_setup()
 }
 add_action('after_setup_theme', 'theme_setup');
 
+// register menus
+function theme_register_menus()
+{
+  register_nav_menus(
+    array(
+      'header-menu-left' => 'Header Menu Left',
+      'header-menu-right' => 'Header Menu Right',
+      'header-menu-mobile' => 'Header Menu Mobile',
+      // Replace 'primary-menu' with your menu location slug and 'Primary Menu' with the menu name.
+    )
+  );
+}
+
 add_action('after_setup_theme', 'theme_register_menus');
 
 // register webpack compiled js and css with theme
@@ -128,17 +141,3 @@ function hide_comments_column_content($column_name, $post_id)
 }
 
 // END -- REMOVE COMMENTS
-
-add_action('after_setup_theme', 'theme_register_menus');
-
-// Callback function to register menus
-function theme_register_menus()
-{
-  // Register a primary navigation menu
-  register_nav_menu('primary-menu', __('Primary Menu', 'your-theme-textdomain'));
-
-  // Register a secondary navigation menu
-  register_nav_menu('secondary-menu', __('Secondary Menu', 'your-theme-textdomain'));
-
-  // You can register more menus if needed
-}
