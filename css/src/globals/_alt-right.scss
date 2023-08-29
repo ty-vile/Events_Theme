@@ -1,0 +1,107 @@
+.ar {
+  width: 100%;
+  margin: auto;
+
+  @include media(">=desktop") {
+    padding: 0 5rem;
+  }
+
+  @include media(">=LGdesktop") {
+    padding: 0rem;
+    max-width: 1700px;
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+
+    @include media(">=desktop") {
+      border: 2px solid black;
+      flex-direction: row;
+    }
+
+    @include media(">=LGdesktop") {
+      max-width: 1700px;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+
+      @include media(">=desktop") {
+        width: 50%;
+      }
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      padding: 4rem;
+
+      @include media(">=desktop") {
+        padding: 10rem;
+      }
+
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__right {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// WITHOUT BORDER
+
+// .ar {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+
+//   @include media(">=desktop") {
+//     padding: 0rem 5rem;
+//     flex-direction: row;
+//   }
+
+//   @include media(">=LGdesktop") {
+//     padding: 0rem;
+//     max-width: 1700px;
+//   }
+
+//   &-left,
+//   &-right {
+//     width: 100%;
+
+//     @include media(">=desktop") {
+//       width: 50%;
+//     }
+//   }
+
+//   &-left {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 4rem;
+
+//     @include media(">=desktop") {
+//       padding: 10rem;
+//     }
+
+//     h3 {
+//       margin-bottom: 20px;
+//     }
+//   }
+
+//   &-right {
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       object-fit: cover;
+//     }
+//   }
+// }

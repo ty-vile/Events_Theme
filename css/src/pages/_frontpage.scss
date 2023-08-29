@@ -1,0 +1,28 @@
+.fpbanner {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-copy {
+    z-index: 100;
+    font-family: $Poppins;
+    color: $white;
+
+    h1 {
+      font-weight: 400;
+
+      text-align: center;
+    }
+  }
+}

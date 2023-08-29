@@ -33,7 +33,7 @@
 <body>
 
 
-  <header id="header">
+  <header id="header" class="transparent-background">
     <div class="container">
 
       <div class="header__inner">
