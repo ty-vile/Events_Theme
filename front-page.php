@@ -24,6 +24,10 @@ $alt_box_two_image = get_field('alt_box_two_image');
 $alt_box_three_title = get_field('alt_box_three_title');
 $alt_box_three_image_left = get_field('alt_box_three_image_left');
 $alt_box_three_image_right = get_field('alt_box_three_image_right');
+// experienceSection
+$experience_title = get_field('experience_title');
+$experience_content = get_field('experience_content');
+
 
 ?>
 
@@ -49,12 +53,37 @@ $alt_box_three_image_right = get_field('alt_box_three_image_right');
 </div>
 
 <!-- ALT BOX ONE - RIGHT -->
-<?php get_template_part(
-    'template-parts/sections/alternate-right',
-    null,
-    array('title' => $alt_box_one_title, 'content' => $alt_box_one_content, 'btnText' => '', 'btnLink' => '', 'leftImage' => '', 'rightImage' => $alt_box_one_image)
-); ?>
+<section class="fpsection-one">
+    <?php get_template_part(
+        'template-parts/sections/alternate-right',
+        null,
+        array('title' => $alt_box_one_title, 'content' => $alt_box_one_content, 'btnText' => '', 'btnLink' => '', 'leftImage' => '', 'rightImage' => $alt_box_one_image)
+    ); ?>
 
+    <!-- ALT BOX TWO - LEFT -->
+    <?php get_template_part(
+        'template-parts/sections/alternate-left',
+        null,
+        array('title' => $alt_box_two_title, 'content' => '', 'btnText' => $alt_box_two_button_text, 'btnLink' => $alt_box_two_button_link, 'leftImage' => $alt_box_two_image, 'rightImage' => '')
+    ); ?>
 
+    <!-- ALT BOX THREE - RIGHT -->
+    <?php get_template_part(
+        'template-parts/sections/alternate-right',
+        null,
+        array('title' => $alt_box_three_title, 'content' => '', 'btnText' => '', 'btnLink' => '', 'leftImage' => $alt_box_three_image_left, 'rightImage' => $alt_box_three_image_right)
+    ); ?>
+</section>
+
+<div class="container">
+    <?php get_template_part(
+        'template-parts/sections/intro-section',
+        null,
+        array(
+            'title' => $experience_title,
+            'copy' => $experience_content,
+        )
+    ); ?>
+</div>
 
 <?php get_footer(); ?>

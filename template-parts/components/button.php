@@ -5,4 +5,7 @@ $link = $args['btnLink']
 
     ?>
 
-<button><a href="<?php echo $link ?>"><?php echo $text ?></a></button>
+<a href="<?php echo $link ?>" class="purple-btn">
+    <?php echo $text ?>
+    <span></span> <span></span> <span></span> <span></span>
+</a>

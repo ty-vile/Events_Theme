@@ -21,8 +21,13 @@
 
     h1 {
       font-weight: 400;
-
       text-align: center;
     }
   }
+}
+
+.fpsection-one {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 }

@@ -11,14 +11,14 @@
 @import "./helpers/container";
 @import "./helpers/cursor";
 
-// components
-
 // globals
 @import "./globals/header";
 @import "./globals/intro-section";
 @import "./globals/alt-right";
+@import "./globals/alt-left";
 
-// elements
+// buttons
+@import "./globals/buttons/button";
 
 // pages
 @import "./pages/frontpage";
