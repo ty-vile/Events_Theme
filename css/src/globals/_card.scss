@@ -1,0 +1,109 @@
+.hover-card {
+  padding-bottom: 200px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include media(">=tablet") {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include media(">=desktop") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    &-link {
+      display: block;
+      border-radius: 2rem;
+      padding: 5rem;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      color: $black;
+      z-index: 2;
+    }
+
+    &-link:hover &-bg {
+      transform: scale(15);
+    }
+
+    &-link:hover &-title h4 {
+      transition: all 0.5s ease;
+      color: $white;
+    }
+
+    &-link:hover img {
+      transition: all 0.5s ease;
+      filter: brightness(0) invert(1);
+    }
+
+    &-bg {
+      // height: 100%;
+      // width: 100%;
+      // z-index: 1;
+      // position: absolute;
+      // transition: all 0.5s ease;
+      // top: 0;
+      // left: 0;
+
+      position: absolute;
+      height: 128px;
+      width: 128px;
+      top: -50px;
+      left: calc(100% - 75px);
+      border-radius: 50%;
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+
+    &-title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 2;
+      font-weight: 300;
+
+      h4 {
+        font-weight: 300;
+      }
+    }
+
+    &-img {
+      width: 33%;
+      max-width: 60px;
+    }
+
+    &:nth-child(1) &-bg {
+      background: linear-gradient(to right, $purple, #a8249b);
+    }
+    &:nth-child(2) &-bg {
+      background-color: $purple-light;
+    }
+    &:nth-child(3) &-bg {
+      background-color: $purple-dark;
+    }
+    &:nth-child(4) &-bg {
+      background-color: $purple-dark;
+    }
+    &:nth-child(5) &-bg {
+      background-color: $purple;
+    }
+    &:nth-child(6) &-bg {
+      background-color: $purple-light;
+    }
+  }
+}
