@@ -28,11 +28,13 @@
 
 
 <div id="cursor-follow"></div>
-
+<div id="scroll-top">
+  <img src="http://bcenew.local/wp-content/uploads/2023/08/icons8-down-arrow-50.png" />
+</div>
 
 <body>
   <div class="menu">
-
+    ABC
   </div>
 
   <header id="header" class="transparent-background">
@@ -45,6 +47,7 @@
         <img src="http://bcenew.local/wp-content/uploads/2023/08/header-logo.svg" />
         <div class="header__inner-right">
           <?php wp_nav_menu($headerMenuRight); ?>
+          <button class="test-menu-btn" style="color: white;">TEST</button>
         </div>
       </div>
 
