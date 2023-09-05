@@ -32,6 +32,7 @@
     &:hover {
       box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
         0 4px 6px -4px rgb(0 0 0 / 0.1);
+      border-bottom: 8px solid $purple;
     }
 
     // &:hover &-inclusions {
@@ -47,6 +48,10 @@
 
     img {
       width: 100%;
+    }
+
+    h3 {
+      font-size: 20px;
     }
 
     h3,

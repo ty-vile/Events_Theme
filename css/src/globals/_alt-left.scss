@@ -14,6 +14,7 @@
   &-inner {
     display: flex;
     flex-direction: column-reverse;
+    border-bottom: 8px solid $purple;
 
     @include media(">=desktop") {
       flex-direction: row;
